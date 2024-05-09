@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  web:
+    image: web
+    container_name: web
+    build:
+      context: .
+      dockerfile: ./packages/web/Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - NODE_ENV=production
